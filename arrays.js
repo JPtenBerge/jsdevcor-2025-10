@@ -43,3 +43,18 @@ console.log(obj);
 let nrStrings = ['1', '2', '3', '4'];
 let nrs = nrStrings.map((item, index) => parseInt(item));
 console.log(nrs);
+
+let summed = nrs.reduce((prev, curr) => {
+    console.log('prev/curr', prev, curr);
+
+    return prev + curr;
+}, 0);
+console.log(summed);
+
+
+console.log([, , , ,].length);
+let objeectje = {
+    x: 24,
+    y: 'hoi', // trailing comma!
+};
+
