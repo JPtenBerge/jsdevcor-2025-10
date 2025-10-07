@@ -1,0 +1,14 @@
+[*.md]
+quote_type = single
+indent_style = space
+indent_size = 2
+
+[*.html]
+quote_type = double
+indent_style = tab
+indent_size = 4
+
+[*.{ts,js,json}]
+quote_type = single
+indent_style = tab
+indent_size = 4
