@@ -32,6 +32,16 @@ Zijn meerdere initiatieven geweest
 - TypeScript?
   - Trager zijn ivm type-safety? Of ze moeten alle types strippen en "gewoon de code runnen" (zie [types as comments](https://tc39.es/proposal-type-annotations/))
 
+## Polyfills
+
+Polyfill: als de browser het niet heeft, implementeer het dan met JS
+
+```js
+window.Temporal ??= {
+	doeIets() {}
+}
+```
+
 ## Coole links
 
 - [Jeff Atwood over oprichting StackOverflow en "having an arch-enemy" (Experts-Exchange)](https://blog.codinghorror.com/whos-your-arch-enemy/)
