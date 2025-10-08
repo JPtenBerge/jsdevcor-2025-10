@@ -129,6 +129,55 @@ In vanilla JS? Sure. In TypeScript? Hmm.
   - prod buildtools: Vite turbopack webpack Grunt gulp Parcel
   - testtools: Jest Vitest Mocha
 
+## Backend JS
+
+- Node.js
+  - 2009
+  - gemaakt door Ryan Dahl
+  - heel goed in C10k problem
+  - I/O needs to be done differently - files database network
+    - .NET Java  per request een nieuwe thread
+    - `await`
+    elke thread heeft eigen stack 1MB - 10.000.000 == 10.000GB RAM
+- Deno
+  - 2020
+  - ook gemaakt door Ryan Dahl
+  - v1 was niet compatible met npm
+  - v2 is eindeiljk compatible
+    - 2024 meende ik
+  - geen node_modules
+  - TypeScript out of the box ondersteund
+  - security++
+    ```sh
+    node ./bla.js
+    deno run --allow-read . --allow-net ./bla.ts
+    ```
+  - Verder wat kleinere dingetjes:
+    ```sh
+    deno test
+    deno format
+    deno lint
+    ```
+- Bun
+  - TypeScript
+  - node_modules
+  - npm compatible
+  - $$$
+  - performance++
+
+## Separation of concerns bij DOM-manipulatie?
+
+Dit gaat officieel tegen separation of concerns in:
+
+```html
+<button onclick="doe();">...</button>
+```
+
+Maar [zie dit tegenargument](https://stackoverflow.com/questions/14346073/angularjs-is-ng-click-a-good-practice-why-is-there-no-ng-event-in-angularj):
+
+>Angular is built around the belief that declarative code is better than imperative when it comes to building UIs and wiring software components together... By declaratively describing how the UI should change as your application state changes, you are freed from low level DOM manipulation tasks.
+
+
 ## Hoe JP up-to-date blijft
 
 - Reddit: techsubreddits  /blazor /webdev /experienceddevs /dotnet
@@ -144,3 +193,5 @@ In vanilla JS? Sure. In TypeScript? Hmm.
 - [`Temporal`-proposal](https://github.com/tc39/proposal-temporal) ter vervanging van `Date`
 - [Playwright](https://playwright.dev/docs/writing-tests), toffe end-to-end testing library
 - [Named capture groups, whaaat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- [10 things I regret about Node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA)
+- [Frontend framework benchmarks](https://github.com/krausest/js-framework-benchmark)
