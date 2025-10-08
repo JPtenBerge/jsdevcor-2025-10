@@ -83,6 +83,26 @@ await expect(locator).toHaveText('Products');
 - TypeScript
 - lange tijd enkel Chromium
 
+## Classes
+
+JavaScript's `#mijnVar` vs TypeScript's `private mijnVar`? Het hangt er vanaf of je dit wil ondersteunen:
+
+```ts
+(mijnService as any).mijnVar
+```
+
+TypeScript is enkel compile-time private.
+
+### In the wild
+
+- React: niet meer.
+- Vue: niet meer.
+- Svelte: nope.
+- Angular: heeft ze! maar wel steeds minder:
+  - route guard: vroeger een class, nu een functie
+  - interceptor: vroeger een class, nu een functie
+  - alle services/componenten/pipes: daar nog wel!
+
 ## Modules
 
 - verschillende JS-bestanden samen laten werken
