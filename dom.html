@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-wiL   CSS   JSdth, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="dom.js"></script>
+		<style>
+			td img {
+				max-width: 120px;
+			}
+			table {
+				width: 40%;
+			}
+		</style>
+	</head>
+	<body>
+		Locaties Info Support
+
+		<button onclick="addLocation();">Add locatie</button>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Waar</th>
+					<th>Beschrijving</th>
+					<th>Rating</th>
+					<th>Foto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<template id="location-template">
+					<tr>
+						<td class="location"></td>
+						<td class="description"></td>
+						<td class="rating">8</td>
+						<td><img class="photo" /></td>
+					</tr>
+				</template>
+				<tr>
+					<td>Veenendaal</td>
+					<td>
+						H&eacute;t hoofdkantoor. Digitaal lunch bestellen, nice. Begane grond is vrij mooi,
+						rest mwoa. Tafelvoetbal++.
+					</td>
+					<td>8</td>
+					<td>
+						<img
+							src="https://www.infosupport.com/wp-content/uploads/2023/12/Screenshot-2023-12-07-152430-aspect-ratio-393-269.png"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>Utrecht</td>
+					<td>
+						WC's stinken, zijn koud in winter, soms wespen aanwezig, soms zeep niet aanwezig.
+						Utrecht is wel awesome. Appelsap aanwezig. Semi-hip buitenmeubilair. Je kan wel door
+						Utrecht heenlopen en bier drinken.
+					</td>
+					<td>6.5</td>
+					<td>
+						<img
+							src="https://www.infosupport.com/wp-content/uploads/2023/12/Trainingslocatie-Utrecht-aspect-ratio-393-269.png"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>Mechelen</td>
+					<td>
+						Bovenste verdieping in gedeeld pand. Heeft altijd een schaakbord klaarstaan. Lunch met
+						lekker uitgebreide bestellijst. Geinige mensen. Tafelvoetbal++
+					</td>
+					<td>8.5</td>
+					<td>
+						<img
+							src="https://www.infosupport.com/wp-content/uploads/2023/12/Screenshot-2023-12-07-152724-aspect-ratio-393-269.png"
+						/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
