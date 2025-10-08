@@ -83,6 +83,39 @@ await expect(locator).toHaveText('Products');
 - TypeScript
 - lange tijd enkel Chromium
 
+## Modules
+
+- verschillende JS-bestanden samen laten werken
+- `import` `export` voor expliciet gebruik van zaken
+- aantal goede coding practices meteen toegepast
+  - `use strict`
+  - geisoleerde code
+
+**Modules voordat we ES Modules hadden**
+
+- ✨ namespace pattern ✨
+- CommonJS - `require('./bestand.js')` - 2009
+  - Node.js
+  - browserify
+- Asynchronous Module Definition
+  - require.js  `define()`
+
+### Wel of niet `.js` bij je import opnemen
+
+In vanilla JS? Sure. In TypeScript? Hmm.
+- 
+- Voor TypeScript zelf (`tsc`) hoeft het niet
+- Check vooral of alle frontendtools blijven werken:
+  - prod buildtools: Vite turbopack webpack Grunt gulp Parcel
+  - testtools: Jest Vitest Mocha
+
+## Hoe JP up-to-date blijft
+
+- Reddit: techsubreddits  /blazor /webdev /experienceddevs /dotnet
+- YouTube: Fireship / Nick Chapsas / Theo t3.gg (let wel: lang niet altijd eens met zijn meningen)
+- als ik Angular, Blazor, ... geef, krijg ik vanzelf mee dat versie 30 uit is => "what's new in ... 30" blogposts
+  - plus, meestal zijn er vaste release cycles, je kan ze bijna in je agenda zetten
+
 ## Coole links
 
 - [Jeff Atwood over oprichting StackOverflow en "having an arch-enemy" (Experts-Exchange)](https://blog.codinghorror.com/whos-your-arch-enemy/)
@@ -90,3 +123,4 @@ await expect(locator).toHaveText('Products');
 - [`\d` in regexes is niet altijd `\[0-9\]`](https://stackoverflow.com/a/6479605/888093)
 - [`Temporal`-proposal](https://github.com/tc39/proposal-temporal) ter vervanging van `Date`
 - [Playwright](https://playwright.dev/docs/writing-tests), toffe end-to-end testing library
+- [Named capture groups, whaaat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
